@@ -938,14 +938,7 @@
         }
       },
         "blocks": {
-          "heading": {
-            "name": "Heading",
-            "settings": {
-              "heading": {
-                "label": "Heading"
-              }
-            }
-          },
+          
         "buttons": {
           "name": "Buttons",
           "settings": {
