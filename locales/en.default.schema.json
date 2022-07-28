@@ -937,11 +937,11 @@
           "label": "Bottom margin"
         },
         "blocks": {
-          "Buttons": {
-            "name": "Buttons",
+          "heading": {
+            "name": "Heading",
             "settings": {
-              "Buttons": {
-                "label": "Buttons"
+              "heading": {
+                "label": "Heading"
               }
             }
           },
@@ -949,11 +949,11 @@
           "name": "Buttons",
           "settings": {
             "button_label": {
-              "label": "First button label",
+              "label": " button label",
               "info": "Leave the label blank to hide the button."
             },
             "button_link": {
-              "label": "First button link"
+              "label": " button link"
             },
             "button_style_secondary": {
               "label": "Use outline button style"
