@@ -935,7 +935,20 @@
         },
         "margin_bottom": {
           "label": "Bottom margin"
-        }
+        },
+        "buttons": {
+          "name": "Buttons",
+          "settings": {
+            "button_label": {
+              "label": "First button label",
+              "info": "Leave the label blank to hide the button."
+            },
+            "button_link": {
+              "label": "First button link"
+            },
+            "button_style_secondary": {
+              "label": "Use outline button style"
+            }
       }
     },
     "image-banner": {
@@ -1088,24 +1101,7 @@
             },
             "button_style_secondary_2": {
               "label": "Use outline button style"
-            },
-            "button_label": {
-              "label": "Second button label",
-              "info": "Leave the label blank to hide the button."
-            },
-            "button_link": {
-              "label": "Second button link"
-            },
-            "button_style_secondary": {
-              "label": "Use outline button style"
             }
-
-
-
-
-
-
-            
           }
         }
       },
