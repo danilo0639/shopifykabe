@@ -936,6 +936,7 @@
         "margin_bottom": {
           "label": "Bottom margin"
         },
+
         "buttons": {
           "name": "Buttons",
           "settings": {
@@ -949,6 +950,8 @@
             "button_style_secondary": {
               "label": "Use outline button style"
             }
+          }
+        }
       }
     },
     "image-banner": {
