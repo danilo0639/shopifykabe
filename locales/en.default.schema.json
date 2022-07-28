@@ -935,8 +935,8 @@
         },
         "margin_bottom": {
           "label": "Bottom margin"
-        },
-        
+        }
+      },
         "blocks": {
           "heading": {
             "name": "Heading",
