@@ -938,7 +938,7 @@
         },
         
           
-          "buttons": {
+          "button": {
             "name": "Buttons",
             "settings": {
               "button_label": {
