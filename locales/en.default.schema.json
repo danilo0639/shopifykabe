@@ -936,7 +936,7 @@
         "margin_bottom": {
           "label": "Bottom margin"
         },
-        "blocks": {
+        
           
           "buttons": {
             "name": "Buttons",
@@ -953,7 +953,7 @@
               }
             }
           }
-        }
+        
       },
        
     "image-banner": {
