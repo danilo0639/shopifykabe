@@ -939,7 +939,7 @@
         
           
           "button": {
-            "name": "Buttons",
+            
             "settings": {
               "button_label": {
                 "label": " Button Label",
