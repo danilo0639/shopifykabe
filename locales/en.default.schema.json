@@ -940,7 +940,7 @@
           "Buttons": {
             "name": "Buttons",
             "settings": {
-              "heading": {
+              "Buttons": {
                 "label": "Buttons"
               }
             }
