@@ -89,7 +89,7 @@
     "colors": {
       "name": "Colors",
       "settings": {
-        "colors_solid_button_labels": {
+        "colors_solid_labels": {
           "label": "Solid button label",
           "info": "Used as foreground color on accent colors."
         },
@@ -1088,7 +1088,24 @@
             },
             "button_style_secondary_2": {
               "label": "Use outline button style"
+            },
+            "button_label": {
+              "label": "Second button label",
+              "info": "Leave the label blank to hide the button."
+            },
+            "button_link": {
+              "label": "Second button link"
+            },
+            "button_style_secondary": {
+              "label": "Use outline button style"
             }
+
+
+
+
+
+
+            
           }
         }
       },
