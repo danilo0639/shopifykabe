@@ -937,11 +937,11 @@
           "label": "Bottom margin"
         },
         "blocks": {
-          "heading": {
-            "name": "Heading",
+          "Buttons": {
+            "name": "Buttons",
             "settings": {
               "heading": {
-                "label": "Heading"
+                "label": "Buttons"
               }
             }
           },
