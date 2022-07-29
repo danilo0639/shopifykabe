@@ -492,7 +492,7 @@
     {%- endif -%}
         
      
-    
+    {% if section.settings.hide_search == true %}
       <div class="header__icons">
        <details-modal class="header__search">
         <details>
@@ -515,7 +515,7 @@
                 <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
                   <div class="field">
                      
-                {% if section.settings.hide_search == true %}
+                
                     <input class="search__input field__input"
                       id="Search-In-Modal"
                       type="search"
@@ -543,7 +543,7 @@
                         <use href="#icon-search">
                       </svg>
                     </button>
-                    {%- endif -%}
+                    
                   </div>
  
                   {%- if settings.predictive_search_enabled -%}
@@ -572,6 +572,7 @@
           {% endif %}
         </details>
       </details-modal>
+      {%- endif -%}
 
       {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
