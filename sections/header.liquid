@@ -491,7 +491,7 @@
       {%- endif -%}
     {%- endif -%}
         
-      {% if section.settings.hide_search == true %}
+     
     
       <div class="header__icons">
        <details-modal class="header__search">
@@ -554,6 +554,8 @@
                     <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
                   {%- endif -%}
                 </form>
+
+                {% if section.settings.hide_search == true %}
               {%- if settings.predictive_search_enabled -%}
                 </predictive-search>
               {%- endif -%}
