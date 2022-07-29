@@ -514,7 +514,7 @@
               {%- endif -%}
                 <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
                   <div class="field">
-
+                     
                 {% if section.settings.hide_search == true %}
                     <input class="search__input field__input"
                       id="Search-In-Modal"
@@ -522,7 +522,7 @@
                       name="q"
                       value=""
                       placeholder="{{ 'general.search.search' | t }}"
-                 {%- endif -%}
+                 
                       {%- if settings.predictive_search_enabled -%}
                         role="combobox"
                         aria-expanded="false"
@@ -543,6 +543,7 @@
                         <use href="#icon-search">
                       </svg>
                     </button>
+                    {%- endif -%}
                   </div>
  
                   {%- if settings.predictive_search_enabled -%}
