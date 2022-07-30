@@ -939,9 +939,7 @@
       },
        
           
-        "buttons": {
-          "name": "Buttons",
-          "settings": {
+        
             "button_label": {
               "label": " Button Label",
               "info": "Leave the label blank to hide the button."
@@ -952,8 +950,7 @@
             "button_style_secondary": {
               "label": "Use outline button style"
             }
-          }
-        }
+       
       
     },
     "image-banner": {
