@@ -110,6 +110,7 @@
   }
 {%- endstyle -%}
 
+
 <script src="{{ 'details-disclosure.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'details-modal.js' | asset_url }}" defer="defer"></script>
 <script src="{{ 'cart-notification.js' | asset_url }}" defer="defer"></script>
@@ -816,19 +817,14 @@
                       {%- endfor -%}
                     </div>
                   </div>
-                  
-                  <a href="tel:2035908897" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-                    {%- liquid render 'icon-cart-empty'-%}
-                  </a>
-                  <a href="tel:2035908897" class="button button--primary" id="phone-desktop">
-                 👋 (203) 590-8897
-                  </a>
-                          
 
-   
+                 
 
-
-
+                  <style>
+                  .header__search {
+                    display: none!important;
+                }
+              </style>
 
 {% schema %}
 
