@@ -595,7 +595,7 @@
         </details>
       </details-modal>
       {%- endif -%}
-
+     </div>
       {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
           {% render 'icon-account' %}
@@ -634,6 +634,8 @@
       </a>
     {%- endif -%}
 
+
+
     <div class="banner__content banner__content page-width">
       <div class="banner__box content-container content-container--full-width-mobile color gradient">
         {%- for block in section.blocks -%}
@@ -661,8 +663,8 @@
   
            
                     
-    </div>
-  </header>
+    
+ </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
 {%- if settings.cart_type == "notification" -%}
