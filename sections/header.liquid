@@ -91,6 +91,14 @@
   }
 </style>
 
+{%-  if section.settings.hide_search == true -%}
+<style>
+   .header__search {
+  display: none!important;
+  }
+</style>
+{%- endif -%}
+
 {%- style -%}
   .header {
     padding-top: {{ section.settings.padding_top | times: 0.5 | round: 0 }}px;
@@ -824,13 +832,7 @@
                   </div>
 
                  
-              {%-  if section.settings.hide_search == true -%}
-                  <style>
-                     .header__search {
-                    display: none!important;
-                    }
-                  </style>
-               {%- endif -%}
+           
 
 {% schema %}
 
