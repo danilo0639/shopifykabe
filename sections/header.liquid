@@ -512,8 +512,9 @@
 
         
      
-   
+      
       <div class="header__icons">
+        {% if section.settings.hide_search == true %}
        <details-modal class="header__search">
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
@@ -593,7 +594,7 @@
           {% endif %}
         </details>
       </details-modal>
-     
+      {%- endif -%}
 
       {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
@@ -632,8 +633,32 @@
         {%- endif -%}
       </a>
     {%- endif -%}
+
+    <div class="banner__content banner__content page-width">
+      <div class="banner__box content-container content-container--full-width-mobile color gradient">
+        {%- for block in section.blocks -%}
+          {%- case block.type -%}
+            {%- when 'heading' -%}
+              <h2 class="banner__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+                <span>{{ block.settings.heading | escape }}</span>
+              </h2>
+            {%- when 'text' -%}
+              <div class="banner__text {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+                <span>{{ block.settings.text | escape }}</span>
+              </div>
+            {%- when 'buttons' -%}
+              <div class="banner__buttons{% if block.settings.button_label != blank  %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
+                {%- if block.settings.button_label != blank -%}
+                  <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
+                {%- endif -%}
+               
     
-      
+              </div>
+          {%- endcase -%}
+        {%- endfor -%}
+      </div>
+    </div>
+  
            
                     
     </div>
@@ -806,30 +831,7 @@
 }
 {%- endstyle -%}
 
-                  <div class="banner__content banner__content page-width">
-                    <div class="banner__box content-container content-container--full-width-mobile color gradient">
-                      {%- for block in section.blocks -%}
-                        {%- case block.type -%}
-                          {%- when 'heading' -%}
-                            <h2 class="banner__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
-                              <span>{{ block.settings.heading | escape }}</span>
-                            </h2>
-                          {%- when 'text' -%}
-                            <div class="banner__text {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
-                              <span>{{ block.settings.text | escape }}</span>
-                            </div>
-                          {%- when 'buttons' -%}
-                            <div class="banner__buttons{% if block.settings.button_label != blank  %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
-                              {%- if block.settings.button_label != blank -%}
-                                <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
-                              {%- endif -%}
-                             
                   
-                            </div>
-                        {%- endcase -%}
-                      {%- endfor -%}
-                    </div>
-                  </div>
 
                  
            
