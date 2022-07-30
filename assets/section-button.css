@@ -309,7 +309,7 @@
     position: relative;
     height: fit-content;
     align-items: left;
-    text-align: left;
+    text-align: center;
     width: 100%;
     word-wrap: break-word;
     z-index: 1;
