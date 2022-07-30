@@ -1,6 +1,6 @@
 .banner {
-    display: flex;
-    position: relative;
+  position: relative;
+  display: block;
     flex-direction: column;
   }
   
