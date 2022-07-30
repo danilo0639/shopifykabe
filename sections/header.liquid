@@ -819,12 +819,13 @@
                   </div>
 
                  
-
+              {%-  if section.settings.hide_search == true -%}
                   <style>
-                  .header__search {
+                     .header__search {
                     display: none!important;
-                }
-              </style>
+                    }
+                  </style>
+               {%- endif -%}
 
 {% schema %}
 
