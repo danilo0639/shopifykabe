@@ -1,4 +1,7 @@
+
+{%-  if section.settings.hide_search == true -%}
 {{ 'section-button.css' | asset_url | stylesheet_tag }}
+{%- endif -%}
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
