@@ -937,7 +937,7 @@
           "label": "Bottom margin"
         }
       },
-        "blocks": {
+       
           
         "buttons": {
           "name": "Buttons",
@@ -954,7 +954,7 @@
             }
           }
         }
-      }
+      
     },
     "image-banner": {
       "name": "Image banner",
