@@ -2887,4 +2887,6 @@ details-disclosure > details {
   font-weight: var(--font-body-weight-bold);
 }
 
-
+.header__search {
+  display: none!important;
+}
