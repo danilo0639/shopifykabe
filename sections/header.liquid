@@ -1,4 +1,4 @@
-
+{{ 'section-button.css' | asset_url | stylesheet_tag }}
 
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
@@ -792,6 +792,30 @@
 }
 {%- endstyle -%}
 
+                  <div class="banner__content banner__content page-width">
+                    <div class="banner__box content-container content-container--full-width-mobile color gradient">
+                      {%- for block in section.blocks -%}
+                        {%- case block.type -%}
+                          {%- when 'heading' -%}
+                            <h2 class="banner__heading {{ block.settings.heading_size }}" {{ block.shopify_attributes }}>
+                              <span>{{ block.settings.heading | escape }}</span>
+                            </h2>
+                          {%- when 'text' -%}
+                            <div class="banner__text {{ block.settings.text_style }}" {{ block.shopify_attributes }}>
+                              <span>{{ block.settings.text | escape }}</span>
+                            </div>
+                          {%- when 'buttons' -%}
+                            <div class="banner__buttons{% if block.settings.button_label != blank  %} banner__buttons--multiple{% endif %}" {{ block.shopify_attributes }}>
+                              {%- if block.settings.button_label != blank -%}
+                                <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
+                              {%- endif -%}
+                             
+                  
+                            </div>
+                        {%- endcase -%}
+                      {%- endfor -%}
+                    </div>
+                  </div>
                   
 
    
@@ -959,30 +983,40 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 20
-    },
-    {
-  
-      "type": "text",
-      "id": "button_label",
-      "default": "Button label",
-      "label": "t:sections.header.settings.button_label.label",
-      "info": "t:sections.header.settings.button_label.info"
-    },
-    {
-      "type": "url",
-      "id": "button_link",
-      "label": "t:sections.header.settings.button_link.label"
-    },
-    {
-      "type": "checkbox",
-      "id": "button_style_secondary",
-      "default": false,
-      "label": "t:sections.header.settings.button_style_secondary.label"
     }
       
   ]
+  {
+    "blocks": [
+    {
   
-    
+      "type": "buttons",
+      "name": "t:sections.header.settings.blocks.buttons.name",
+      "limit": 1,
+      "settings": [
+          {
+  
+            "type": "text",
+            "id": "button_label",
+            "default": "Button label",
+            "label": "t:sections.header.blocks.buttons.settings.button_label.label",
+            "info": "t:sections.header.blocks.buttons.settings.button_label.info"
+          },
+          {
+            "type": "url",
+            "id": "button_link",
+            "label": "t:sections.header.blocks.buttons.settings.button_link.label"
+          },
+          {
+            "type": "checkbox",
+            "id": "button_style_secondary",
+            "default": false,
+            "label": "t:sections.header.blocks.buttons.settings.button_style_secondary.label"
+          }
+        ]        
+     }
+   ]
+  }
   
 }
 {% endschema %}
