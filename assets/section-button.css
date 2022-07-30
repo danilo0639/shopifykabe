@@ -1,12 +1,4 @@
-.banner {
-    display: flex;
-    position: relative;
-   
-  }
-  
-  .banner__box {
-    text-align: left;
-  }
+
   
   @media only screen and (max-width: 749px) {
     .banner--content-align-mobile-right .banner__box {
