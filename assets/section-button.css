@@ -1,11 +1,11 @@
 .banner {
       position: relative;
   display: block;
-    flex-direction: column;
+   
   }
   
   .banner__box {
-    text-align: center;
+    text-align: left;
   }
   
   @media only screen and (max-width: 749px) {
@@ -308,8 +308,8 @@
     padding: 4rem 3.5rem;
     position: relative;
     height: fit-content;
-    align-items: center;
-    text-align: center;
+    align-items: left;
+    text-align: left;
     width: 100%;
     word-wrap: break-word;
     z-index: 1;
