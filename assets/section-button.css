@@ -1,5 +1,5 @@
 .button_tel {
-  display: wrap-reverse;
+  display:  inline-flex;
   justify-content: center;
   align-items: center;
   right: var(--inputs-border-width);
