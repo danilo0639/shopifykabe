@@ -7,7 +7,7 @@
 }
 
 
-.button__text{
+.button_tel.button__text{
   font-size: medium;
   font-style: italic;
   font-family: Arial, Helvetica, sans-serif;
