@@ -921,10 +921,10 @@
           "label": "Show separator line"
         },
         "hide_cart": {
-          "label": "Hide Cart"
+          "label": "Show Cart"
         },
         "hide_search": {
-          "label": "Hide Search"
+          "label": "Show Search"
         },
         "button_tel": {
           "label": "Button Tel"
