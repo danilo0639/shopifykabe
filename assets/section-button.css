@@ -1,9 +1,12 @@
 .banner {
-      position: left;
-    
-      display: flex;
-      justify-content: flex-end;
-   
+  position: fixed;
+  z-index: 1000;
+  left: 0;
+  top: 0;
+  width: 100vw;
+  height: 100%;
+  display: flex;
+  justify-content: flex-end;
   }
   
   .banner__box {
