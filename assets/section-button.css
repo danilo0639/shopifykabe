@@ -1,8 +1,7 @@
 .button_tel {
-  position: relative;
-  display: flex;
-  float: left;
-  border-radius: 226px;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
 
 }
 
