@@ -2408,12 +2408,18 @@ menu-drawer + .header__search {
   line-height: 0;
 }
 
-.header__icon, .button_tel {
-  display:  inline-flex;
-  justify-content: center;
-  align-items: center;
-  right: var(--inputs-border-width);
-  top: var(--inputs-border-width);
+.header__icon, .button_tel .icon {
+  height: 4.4rem;
+  width: 4.4rem;
+  padding: 0;
+
+}
+.button_tel {
+  height: 4.4rem;
+  width: 4.4rem;
+  padding: 0;
+  position: relative;
+  margin-right: -1.2rem;
 
 }
 
