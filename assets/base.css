@@ -2228,7 +2228,7 @@ input[type='checkbox'] {
 .header {
   display: grid;
   grid-template-areas: 'left-icon heading icons';
-  grid-template-columns: 1fr 2fr 1fr ;
+  grid-template-columns: 1fr 2fr 1fr;
   align-items: center;
 }
 
@@ -2324,7 +2324,7 @@ input[type='checkbox'] {
 
 /* Header icons */
 .header__icons {
-  display: wrap-reverse;
+  display: flex;
   grid-area: icons;
   justify-self: end;
 }
