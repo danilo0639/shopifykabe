@@ -2421,7 +2421,7 @@ menu-drawer + .header__search {
   height: 1.7rem;
   width: 1.7rem;
   border-radius: 100%;
-  display: space-around;
+  display: wrap-reverse;
   justify-content: flex-end;
   align-items: center;
 
