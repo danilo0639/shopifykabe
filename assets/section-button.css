@@ -1,4 +1,22 @@
 .button_tel {
   position: relative;
-  display: block;
+  display: flex;
+  float: center;
+  text-decoration: none;
+  padding: 10px;
+  font-weight: 600;
+  font-size: 20px;
+  border-radius: 6px;
+}
+
+
+.button_tel:active{
+  margin-top: 5px;
+  color: steelblue;
+}
+.button_tel:hover{
+  cursor: pointer;
+  color:rgb(241, 136, 8);
+
+
 }
