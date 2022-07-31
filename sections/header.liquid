@@ -604,7 +604,7 @@
         </a>
       {%- endif -%}
       
-      {%-  if section.settings.hide_cart == true -%}
+      {%-  if section.settings.hide_cart == false -%}
 
                     
       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
@@ -936,7 +936,7 @@
     {
       "type": "checkbox",
       "id": "hide_cart",
-      "default": false,
+      "default": true,
       "label": "t:sections.header.settings.hide_cart.label"
       
     },
