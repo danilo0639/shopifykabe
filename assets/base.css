@@ -2416,7 +2416,7 @@ menu-drawer + .header__search {
 }
 .button_tel {
  
-  position: absolute;
+  position: relative;
   
   height: 1.7rem;
   width: 1.7rem;
