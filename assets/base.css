@@ -2422,7 +2422,7 @@ menu-drawer + .header__search {
   width: 1.7rem;
   border-radius: 100%;
   display: wrap-reverse;
-  justify-content: flex-end;
+  justify-content: center;
   align-items: center;
 
   bottom: 0.8rem;
