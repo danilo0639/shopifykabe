@@ -87,13 +87,7 @@
   }
 </style>
 
-{%-  if section.settings.hide_search == false -%}
-<style>
-.header__search {
-  display: none!important;
-}
-</style>
-{%- endif -%}
+
 
 {%- style -%}
   .header {
@@ -504,11 +498,13 @@
         </nav>
       {%- endif -%}
 
+
+      
         
      
    
       <div class="header__icons">
-       <details-modal class="header__search">
+       <details-modal class="header__search{%-  if section.settings.hide_search == false -%} hidden"  >
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
