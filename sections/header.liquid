@@ -621,6 +621,23 @@
         {%- endif -%}
       </a>
     </div>  
+
+    <div>
+      {%- if section.settings.logo_tel != blank -%}
+      {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
+      {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
+      {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
+        class: 'header__heading-logo',
+        widths: '50, 100, 150, 200, 250, 300, 400, 500',
+        height: logo_height,
+        width: section.settings.logo_width,
+        alt: logo_alt
+      }}
+      {%- endif -%}
+
+
+
+    </div>
     
     <div class="  button_tel" id= "phone-desktop" >
     {%- for block in section.blocks -%}
@@ -631,25 +648,7 @@
               </div>
        {%- endfor -%}
     </div>
-                 <div>
-                    {%- if section.settings.logo_tel != blank -%}
-                    {%- assign logo_alt = section.settings.logo.alt | default: shop.name | escape -%}
-                    {%- assign logo_height = section.settings.logo_width | divided_by: section.settings.logo.aspect_ratio -%}
-                    {{ section.settings.logo | image_url: width: section.settings.width | image_tag:
-                    class: 'header__heading-logo',
-                    widths: '50, 100, 150, 200, 250, 300, 400, 500',
-                    height: logo_height,
-                    width: section.settings.logo_width,
-                    alt: logo_alt
-                     }}
-                   {%- else -%}
-                 </div>
-
-
-
-
-
-
+           
   </div>
 </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
