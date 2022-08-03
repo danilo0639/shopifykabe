@@ -247,7 +247,7 @@ html.no-js .no-js-hidden {
   display: none;
   }
 }
-@media screen and (min-width: 980px){
+@media screen and (min-width: 989px){
   #phone-logo{
   display: none !important ;
   }
