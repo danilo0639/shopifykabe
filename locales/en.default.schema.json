@@ -884,6 +884,9 @@
     "header": {
       "name": "Header",
       "settings": {
+        "logo_tel": {
+          "label": "Logo Tel"
+        },
         "logo": {
           "label": "Logo image"
         },
