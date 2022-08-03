@@ -600,8 +600,8 @@
       
       
 
-                    
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble{%-  if section.settings.hide_cart == true -%} hidden{%- endif -%} ">
+     <div class= "{%-  if section.settings.hide_cart == true -%} hidden{%- endif -%} ">           
+      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
         {%- liquid
           if cart == empty
             render 'icon-cart-empty'
@@ -619,7 +619,7 @@
           </div>
         {%- endif -%}
       </a>
-  
+    </div>  
     
     <div class="  button_tel" >
     {%- for block in section.blocks -%}
