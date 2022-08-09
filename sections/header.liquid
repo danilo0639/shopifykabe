@@ -637,12 +637,15 @@
           <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
            {%- liquid render 'logo-1-tel'-%}
          </a>
-     {% elsif section.settings.icontel_type.options == option_2 %}
+        {%- endif -%} 
+
+     {%-if section.settings.icontel_type.options == option_2 %}
          <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
            {%- liquid render 'icon-2-tel'-%}
          </a>
+       {%- endif -%} 
 
-      {% elsif section.settings.icontel_type.options == option_3 %}
+      {%-if section.settings.icontel_type.options == option_3 %}
        <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
          {%- liquid render 'icon-3-tel'-%}
        </a>
