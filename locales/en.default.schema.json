@@ -907,7 +907,7 @@
           },
           "info": "Position is automatically optimized for mobile."
         },
-        
+
         "icontel_type": {
           "label": "Icon Tel",
           "options-1": {
@@ -921,6 +921,7 @@
           },
           "info": "I dont want icon."
         },
+        
         "menu": {
           "label": "Menu"
         },
