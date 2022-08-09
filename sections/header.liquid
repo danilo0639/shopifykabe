@@ -634,12 +634,21 @@
     
        
      {%-  if section.settings.icontel_type.options == option_1 -%} 
-  
-         <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
+          <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
            {%- liquid render 'logo-1-tel'-%}
          </a>
-  
-      {%- endif -%} 
+     {% elsif section.settings.icontel_type.options == option_1 %}
+     <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
+      {%- liquid render 'icon-2-tel'-%}
+    </a>
+
+     {% elsif section.settings.icontel_type.options == option_1 %}
+     <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
+      {%- liquid render 'icon-3-tel'-%}
+    </a>
+    
+    {%- endif -%} 
+
 
 
 
