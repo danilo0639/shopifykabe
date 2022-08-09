@@ -641,7 +641,7 @@
    
 
 
-    {% assign handle = header.icontel_type%}
+    {% assign handle = section.settings.icontel_type%}
     {%- case  handle-%}
        {%- when 'option_1' -%}
        <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
@@ -655,7 +655,7 @@
      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
       {%- liquid render 'logo-1-tel'-%}
      </a>
-  {%- endcase -%}
+   {%- endcase -%}
 
 
 
