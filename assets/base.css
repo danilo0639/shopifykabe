@@ -2918,7 +2918,7 @@ details-disclosure > details {
 } 
 
 .tel-icon-bubble {
-  position: absolute;
-  background-color: rgb(var(--color-button));
-  
+  position: relative;
+  bottom: 0.8rem;
+  left: 2.2rem;
 }
