@@ -907,6 +907,19 @@
           },
           "info": "Position is automatically optimized for mobile."
         },
+        "icontel_type": {
+          "label": "Icon Tel",
+          "options__1": {
+            "label": "Icon 1"
+          },
+          "options__2": {
+            "label": "Icon 2"
+          },
+          "options__3": {
+            "label": "Icon 3"
+          },
+          "info": "I dont want icon."
+        },
         "menu": {
           "label": "Menu"
         },
