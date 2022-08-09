@@ -632,9 +632,48 @@
        {%- endfor -%}
     </div>
     
-    <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
+
+
+
+
+
+    
+   
+
+
+
+    {%- case header.settings.icontel_type -%}
+       {%- when 'option_1' -%}
+       <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
+        {%- liquid render 'logo-1-tel'-%}
+       </a>
+     {%- when 'option_2' -%}
+     <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
       {%- liquid render 'logo-1-tel'-%}
-    </a>
+     </a>
+     {%- when 'option_3' -%}
+     <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
+      {%- liquid render 'logo-1-tel'-%}
+     </a>
+  {%- endcase -%}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
   </div>
 </header>
