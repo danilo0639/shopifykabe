@@ -643,7 +643,7 @@
    
   <div>
 
-    {% assign handle = section.settings.icontel_type %}
+    {% assign handle = section.settings.icontel_type.options%}
     {%- case  handle-%}
        {%- when 'option_1' -%}
        <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
