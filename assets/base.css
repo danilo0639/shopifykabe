@@ -2421,6 +2421,9 @@ menu-drawer + .header__search {
 
 }
 .button_tel {
+
+  bottom: 0.8rem;
+  left: 2.2rem;
   background-color: rgb(var(--color-button))
 
 }
@@ -2914,7 +2917,8 @@ details-disclosure > details {
 } 
 
 .tel-icon-bubble {
-  position: absolute;
-  background-color: rgb(var(--color-button));
+  
+  bottom: 0.8rem;
+  left: 2.2rem;
   
 }
