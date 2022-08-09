@@ -2920,7 +2920,8 @@ details-disclosure > details {
 	}
   
 } 
-.tel-count-bubble {
+
+.tel-icon-bubble {
   position: absolute;
   background-color: rgb(var(--color-button));
   color: rgb(var(--color-button-text));
