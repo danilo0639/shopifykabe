@@ -2918,4 +2918,11 @@ details-disclosure > details {
   font-weight: var(--font-body-weight-bold);
 }
 
-
+@media screen and (min-width: 990px){
+	
+  	#tel-icon-bubble {
+    	display: none;
+      	
+	}
+  
+} 
