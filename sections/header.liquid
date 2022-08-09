@@ -602,31 +602,28 @@
       
 
      <div class= "{%-  if section.settings.hide_cart == false -%} hidden{%- endif -%} ">           
-      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-        {%- liquid
-          if cart == empty
-            render 'icon-cart-empty'
-          else
-            render 'icon-cart'
-          endif
-        -%}
-        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-        {%- if cart != empty -%}
-          <div class="cart-count-bubble">
-            {%- if cart.item_count < 100 -%}
-              <span aria-hidden="true">{{ cart.item_count }}</span>
-            {%- endif -%}
-            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-          </div>
-        {%- endif -%}
-      </a>
-    </div>  
+        <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+          {%- liquid
+            if cart == empty
+              render 'icon-cart-empty'
+           else
+             render 'icon-cart'
+           endif
+         -%}
+         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+          {%- if cart != empty -%}
+           <div class="cart-count-bubble">
+             {%- if cart.item_count < 100 -%}
+               <span aria-hidden="true">{{ cart.item_count }}</span>
+             {%- endif -%}
+             <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+           </div>
+         {%- endif -%}
+       </a>
+     </div>  
     
-    
-
     <div class="button_tel" id= "phone-desktop" >
-      
-    {%- for block in section.blocks -%}
+       {%- for block in section.blocks -%}
            <div class="button_link">
               {%- if block.settings.button_label != blank -%}
                 <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
