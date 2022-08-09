@@ -2424,8 +2424,7 @@ menu-drawer + .header__search {
  
   position: relative;
   
-  display: wrap-reverse;
-  justify-content: center;
+  
   align-items: center;
   bottom: 0.8rem;
   left: 2.2rem;
