@@ -2429,7 +2429,7 @@ menu-drawer + .header__search {
   align-items: center;
   bottom: 0.8rem;
   left: 2.2rem;
-  
+  background-color: rgb(var(--color-button))
 
 }
 
