@@ -643,8 +643,9 @@
    
   <div>
 
-   
-    {%- case  icontel_type.options-%}
+
+    {%- for icontel_type in section.header.settings -%}
+    {%- case  icontel_type.options -%}
        {%- when 'option_1' -%}
        <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
         {%- liquid render 'logo-1-tel'-%}
