@@ -632,11 +632,21 @@
        {%- endfor -%}
     </div>
     
+
+
+
     <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
       {%- liquid render 'logo-1-tel'-%}
     </a>
 
+
+
+
+
   </div>
+
+
+
 </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
@@ -978,6 +988,30 @@
       "unit": "px",
       "label": "t:sections.all.padding.padding_bottom",
       "default": 20
+    },{
+      "type": "select",
+      "id": "icontel_type",
+      "options": [
+        {
+          "value": "accent-1",
+          "label": "t:sections.all.colors.accent_1.label"
+        },
+        {
+          "value": "accent-2",
+          "label": "t:sections.all.colors.accent_2.label"
+        },
+        {
+          "value": "background-1",
+          "label": "t:sections.all.colors.background_1.label"
+        },
+        {
+          "value": "background-2",
+          "label": "t:sections.all.colors.background_2.label"
+        },
+        
+      ],
+      "default": "background-1",
+      "label": "t:sections.all.colors.label"
     }
       
   ],
