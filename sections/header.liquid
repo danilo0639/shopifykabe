@@ -633,19 +633,19 @@
     </div>
     
        
-     {%-  if section.settings.icontel_type.options_1 -%} 
+     {%-  if section.settings.icontel_type.options === options_1 -%} 
           <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
            {%- liquid render 'logo-1-tel'-%}
          </a>
         {%- endif -%} 
 
-     {%-if section.settings.icontel_type.options_2 -%}
+     {%-if section.settings.icontel_type.options === options_2 -%}
          <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
            {%- liquid render 'icon-2-tel'-%}
          </a>
        {%- endif -%} 
 
-      {%-if section.settings.icontel_type.options_3 -%}
+      {%-if section.settings.icontel_type.options === options_3 -%}
        <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
          {%- liquid render 'icon-3-tel'-%}
        </a>
