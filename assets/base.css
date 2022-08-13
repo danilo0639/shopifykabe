@@ -2898,19 +2898,16 @@ details-disclosure > details {
 	}
   
 } 
+
 #tel-icon-bubble{
   position: absolute;
 
-  color: rgb(var(--color-button-text));
+  
   height: 1.7rem;
   width: 1.7rem;
-
-  display: flex;
- 
-  
-  bottom: 0.8rem;
+   bottom: 0.8rem;
   left: 2.2rem;
-  line-height: calc(1 + 0.1 / var(--font-body-scale));
+ 
 
 }
 
