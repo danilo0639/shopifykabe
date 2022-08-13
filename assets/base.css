@@ -2905,6 +2905,10 @@ details-disclosure > details {
 } 
 
 #tel-icon-bubble{
+  position: relative;
+  bottom: 0.8rem;
+  left: 2.2rem;
+
 
 }
 
