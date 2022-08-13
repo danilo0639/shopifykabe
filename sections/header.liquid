@@ -628,8 +628,8 @@
               {%- if block.settings.button_label != blank -%}
                 <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
               {%- endif -%}
-              </div>
 
+              
               {%-if  blocks.settings.icontel_type == "options_1" -%} 
               <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble">
                {%- liquid render 'logo-1-tel'-%}
@@ -661,11 +661,14 @@
 
 
 
+
+
+              </div>
        {%- endfor -%}
      </div>
 
 
-
+    
 
 
 
