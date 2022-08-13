@@ -631,6 +631,8 @@
            </div>
 
            <div class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble" >
+
+            <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label 
                 {%-if  block.settings.icontel_type == "options_1" -%} 
             
                    {%- liquid render 'logo-1-tel'-%}
@@ -648,6 +650,8 @@
                       {%- liquid render 'icon-3-tel'-%}
               
                   {%- endif -%} 
+
+                  | escape }}</a>
              </div>
 
 
