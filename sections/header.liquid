@@ -627,10 +627,8 @@
            <div  class="button_link" >
               {%- if block.settings.button_label != blank -%}
                 <a id= "phone-desktop" {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
-                  
-
-
-                  <a  class="header__icon header__icon--cart " id="tel-icon-bubble" {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">
+                
+                <a  class="header__icon header__icon--cart " id="tel-icon-bubble" {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">
 
             
                   {%-if  block.settings.icontel_type == "options_1" -%} 
