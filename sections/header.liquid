@@ -630,25 +630,29 @@
               {%- endif -%}
            </div>
 
-
-
-           {%-if  block.settings.icontel_type == "options_1" -%} 
-
-                {%- liquid render 'logo-1-tel'-%}
-
-           {%- endif -%} 
-      
-           {%-if block.settings.icontel_type == "options_2" -%}
-   
-               {%- liquid render 'icon-2-tel'-%}
-
-            {%- endif -%} 
-      
-          {%-if block.settings.icontel_type == "options_3" -%}
+           <div class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble" >
+                {%-if  block.settings.icontel_type == "options_1" -%} 
             
-               {%- liquid render 'icon-3-tel'-%}
+                   {%- liquid render 'logo-1-tel'-%}
+            
+                {%- endif -%} 
+            
+                  {%-if block.settings.icontel_type == "options_2" -%}
+            
+                   {%- liquid render 'icon-2-tel'-%}
+            
+                  {%- endif -%} 
+            
+                  {%-if block.settings.icontel_type == "options_3" -%}
+            
+                      {%- liquid render 'icon-3-tel'-%}
+              
+                  {%- endif -%} 
+             </div>
 
-          {%- endif -%} 
+
+
+      
       
           {%- endfor -%}
      </div>
