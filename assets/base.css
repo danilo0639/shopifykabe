@@ -2898,7 +2898,11 @@ details-disclosure > details {
 	}
   
 } 
-
+#tel-icon-bubble{
+  height: 4.4rem;
+  width: 4.4rem;
+  padding: 0;
+}
 
 
 @media screen and (max-width: 990px){
@@ -2907,8 +2911,12 @@ details-disclosure > details {
   }
 }
 
+.header__icon, .button_tel .icon {
+  height: 4.4rem;
+  width: 4.4rem;
+  padding: 0;
 
-
+}
 .button_tel {
  
   position: relative;
