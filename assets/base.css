@@ -2899,6 +2899,12 @@ details-disclosure > details {
   
 } 
 
+#tel-icon-bubble{
+  position: absolute;
+
+
+}
+
 
 @media screen and (max-width: 990px){
   #phone-desktop{
