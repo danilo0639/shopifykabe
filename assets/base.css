@@ -2892,13 +2892,13 @@ details-disclosure > details {
 
 @media screen and (min-width: 990px){
 	
-  	.tel-icon-bubble {
+  	#tel-icon-bubble {
     	display: none;
       	
 	}
   
 } 
-.tel-icon-bubble{
+#tel-icon-bubble{
   position: absolute;
 
   color: rgb(var(--color-button-text));
