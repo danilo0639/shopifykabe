@@ -2900,7 +2900,7 @@ details-disclosure > details {
 } 
 
 #tel-icon-bubble{
-  position: absolute;
+  position: relative;
 
 
 }
