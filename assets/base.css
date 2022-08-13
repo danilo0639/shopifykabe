@@ -2892,7 +2892,7 @@ details-disclosure > details {
 
 @media screen and (min-width: 990px){
 	
-  	#tel-icon-bubble {
+  	.tel-icon-bubble {
     	display: none;
       	
 	}
@@ -2907,7 +2907,7 @@ details-disclosure > details {
 
 
 @media screen and (max-width: 990px){
-  .phone-desktop{
+  #phone-desktop{
   display: none;
   }
 }
