@@ -624,33 +624,52 @@
     
     <div class="button_tel"  >
        {%- for block in section.blocks -%}
-           <div  class="button_link" id= "phone-desktop">
+           <div  class="button_link" >
               {%- if block.settings.button_label != blank -%}
-                <a{% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
+                <a id= "phone-desktop" {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
+                  
+
+                <div class="header__icon header__icon--cart " id="tel-icon-bubble"  class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}" >
+           
+            
+                  {%-if  block.settings.icontel_type == "options_1" -%} 
+              
+                     {%- liquid render 'logo-1-tel'-%}
+              
+                  {%- endif -%} 
+              
+                    {%-if block.settings.icontel_type == "options_2" -%}
+              
+                     {%- liquid render 'icon-2-tel'-%}
+              
+                    {%- endif -%} 
+              
+                    {%-if block.settings.icontel_type == "options_3" -%}
+              
+                        {%- liquid render 'icon-3-tel'-%}
+                
+                    {%- endif -%} 
+               </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
               {%- endif -%}
            </div>
 
-           <div class="header__icon header__icon--cart " id="tel-icon-bubble"  class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}" >
-           
-            
-                {%-if  block.settings.icontel_type == "options_1" -%} 
-            
-                   {%- liquid render 'logo-1-tel'-%}
-            
-                {%- endif -%} 
-            
-                  {%-if block.settings.icontel_type == "options_2" -%}
-            
-                   {%- liquid render 'icon-2-tel'-%}
-            
-                  {%- endif -%} 
-            
-                  {%-if block.settings.icontel_type == "options_3" -%}
-            
-                      {%- liquid render 'icon-3-tel'-%}
-              
-                  {%- endif -%} 
-             </div>
+          
 
 
 
