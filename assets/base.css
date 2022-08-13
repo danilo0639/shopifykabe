@@ -2899,10 +2899,7 @@ details-disclosure > details {
   
 } 
 
-#tel-icon-bubble {
-  position: block;
 
-}
 
 @media screen and (max-width: 990px){
   #phone-desktop{
