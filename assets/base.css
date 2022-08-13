@@ -2899,9 +2899,10 @@ details-disclosure > details {
   
 } 
 #tel-icon-bubble{
-  height: 4.4rem;
-  width: 4.4rem;
-  padding: 0;
+  position: relative;
+  bottom: 0.8rem;
+  left: 2.2rem;
+
 }
 
 
@@ -2915,5 +2916,13 @@ details-disclosure > details {
   height: 4.4rem;
   width: 4.4rem;
   padding: 0;
+
+}
+.button_tel {
+ 
+  position: relative;
+  bottom: 0.8rem;
+  left: 2.2rem;
+
 
 }
