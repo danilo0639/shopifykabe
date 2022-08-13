@@ -907,22 +907,8 @@
           },
           "info": "Position is automatically optimized for mobile."
         },
-
-        "icontel_type": {
-          "label": "Icon Tel",
-          "options_1": {
-            "label": "Icon 1"
-          },
-          "options_2": {
-            "label": "Icon 2"
-          },
-          "options_3": {
-            "label": "Icon 3"
-          },
-          "info": "I dont want icon."
-        },
         
-        "menu": {
+       "menu": {
           "label": "Menu"
         },
         "menu_type_desktop": {
@@ -969,6 +955,19 @@
             },
             "button_style_secondary": {
               "label": "Use outline button style"
+            },
+            "icontel_type": {
+              "label": "Icon Tel",
+              "options_1": {
+                "label": "Icon 1"
+              },
+              "options_2": {
+                "label": "Icon 2"
+              },
+              "options_3": {
+                "label": "Icon 3"
+              },
+              "info": "I dont want icon."
             }
           }
         }
