@@ -630,8 +630,8 @@
               {%- endif -%}
            </div>
 
-           <div class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble" >
-
+           <div class="header__icon header__icon--cart link focus-inset" id="tel-icon-bubble"  class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}" >
+           
             
                 {%-if  block.settings.icontel_type == "options_1" -%} 
             
