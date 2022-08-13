@@ -242,11 +242,6 @@ html.no-js .no-js-hidden {
   }
 }
 
-@media screen and (max-width: 990px){
-  #phone-desktop{
-  display: none;
-  }
-}
 
 @media screen and (min-width: 990px) {
   .page-width--narrow {
@@ -2922,3 +2917,5 @@ details-disclosure > details {
   bottom: 0.8rem;
   left: 2.2rem;
 }
+
+
