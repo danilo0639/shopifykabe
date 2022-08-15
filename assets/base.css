@@ -2908,7 +2908,7 @@ details-disclosure > details {
 
 
 @media screen and (max-width: 990px){
-  #phone-desktop{
+  #button_tel{
   display: none;
   }
 }
@@ -2919,7 +2919,7 @@ details-disclosure > details {
   padding: 0;
 
 }
-.button_tel {
+#button_tel {
  
   position: relative;
   bottom: 0.8rem;
