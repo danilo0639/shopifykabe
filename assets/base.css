@@ -2895,39 +2895,32 @@ details-disclosure > details {
   font-weight: var(--font-body-weight-bold);
 }
 
+
+
+
 @media screen and (min-width: 990px){
-	
-  	#tel-icon-bubble {
-    	display: none;
+	#call_to_action {
+     display: none;
       	
 	}
-  
 } 
-
-#tel-icon-bubble{
+.call_to_action{
   margin:auto;
   left: 2.2rem;
   width: 4.4rem;
 }
-
-
 @media screen and (max-width: 990px){
-  #button_tel{
+  #button_call_to_action{
   display: none;
   }
 }
-
-.header__icon, .button_tel .icon {
+.header__icon, .button_call_to_action .icon {
   height: 4.4rem;
   width: 4.4rem;
   padding: 0;
-
 }
-#button_tel {
- 
+#button_call_to_action {
   position: relative;
   bottom: 0.8rem;
   left: 2.2rem;
-
-
 }
