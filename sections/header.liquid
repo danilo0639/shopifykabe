@@ -623,13 +623,11 @@
      </div>  
     
        
-         {%- for block in section.blocks -%}
-            <div  class="button_link" >
-              {%- if block.settings.button_label != blank -%}
-             
+           {%- for block in section.blocks -%}
+             <div  class="button_link" >
+               {%- if block.settings.button_label != blank -%}
                  <a id="button_tel" {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
-                
-                 <a class="header__icon header__icon--menu link focus-inset " id="tel-icon-bubble" {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"> 
+                 <a class="header__icon  " id="tel-icon-bubble" {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"> 
                     {%-if  block.settings.icontel_type == "options_1" -%} 
                        {%- liquid render 'logo-1-tel'-%}
                     {%-elsif block.settings.icontel_type == "options_2" -%}
@@ -639,8 +637,8 @@
                     {%- endif -%} 
                   </a>
                {%- endif -%}
-            </div>
-         {%- endfor -%}
+             </div>
+           {%- endfor -%}
        
 
 
