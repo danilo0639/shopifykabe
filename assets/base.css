@@ -2908,7 +2908,7 @@ details-disclosure > details {
 
 
 @media screen and (max-width: 990px){
- .button-tel{
+  #phone-desktop{
   display: none;
   }
 }
