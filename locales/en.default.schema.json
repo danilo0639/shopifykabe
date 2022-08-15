@@ -957,15 +957,15 @@
               "label": "Use outline button style"
             },
             "icontel_type": {
-              "label": "Call To Action 1",
+              "label": "Call To Action ",
               "options_1": {
-                "label": "Call To Action 2"
+                "label": "Call To Action 1"
               },
               "options_2": {
-                "label": "Call To Action 3"
+                "label": "Call To Action 2"
               },
               "options_3": {
-                "label": "Icon 3"
+                "label": "Call To Action 3"
               },
               "info": "Choose Your Favorite Call To Action."
             }
