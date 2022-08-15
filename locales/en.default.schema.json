@@ -89,7 +89,7 @@
     "colors": {
       "name": "Colors",
       "settings": {
-        "colors_solid_labels": {
+        "colors_solid_button_labels": {
           "label": "Solid button label",
           "info": "Used as foreground color on accent colors."
         },
