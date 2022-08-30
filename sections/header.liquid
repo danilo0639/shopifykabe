@@ -1,17 +1,12 @@
-{{ 'section-button.css' | asset_url | stylesheet_tag }}
-
 <link rel="stylesheet" href="{{ 'component-list-menu.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-search.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-menu-drawer.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-notification.css' | asset_url }}" media="print" onload="this.media='all'">
 <link rel="stylesheet" href="{{ 'component-cart-items.css' | asset_url }}" media="print" onload="this.media='all'">
-<link rel="stylesheet" href="{{ 'section-button.css' | asset_url }}" media="print" onload="this.media='all'">
-
 {%- if settings.predictive_search_enabled -%}
   <link rel="stylesheet" href="{{ 'component-price.css' | asset_url }}" media="print" onload="this.media='all'">
   <link rel="stylesheet" href="{{ 'component-loading-overlay.css' | asset_url }}" media="print" onload="this.media='all'">
 {%- endif -%}
-
 {%- if section.settings.menu_type_desktop == 'mega' -%}
   <link rel="stylesheet" href="{{ 'component-mega-menu.css' | asset_url }}" media="print" onload="this.media='all'">
   <noscript>{{ 'component-mega-menu.css' | asset_url | stylesheet_tag }}</noscript>
@@ -86,8 +81,6 @@
     }
   }
 </style>
-
-
 
 {%- style -%}
   .header {
@@ -314,7 +307,6 @@
               </svg>
             </span>
           </summary>
-         
           <div class="search-modal modal__content gradient" role="dialog" aria-modal="true" aria-label="{{ 'general.search.search' | t }}">
             <div class="modal-overlay"></div>
             <div class="search-modal__content{% if settings.inputs_shadow_vertical_offset != 0 and settings.inputs_shadow_vertical_offset < 0 %} search-modal__content-top{% else %} search-modal__content-bottom{% endif %}" tabindex="-1">
@@ -373,7 +365,6 @@
               </button>
             </div>
           </div>
-        
         </details>
       </details-modal>
     {%- endif -%}
@@ -497,13 +488,11 @@
           </ul>
         </nav>
       {%- endif -%}
+    {%- endif -%}
 
-        
-     
-   
     <div class="header__icons">
-      <div class= "{%-  if section.settings.hide_search == false -%} hidden{% endif %}">
-       <details-modal class="header__search">
+      {% comment %}
+      <details-modal class="header__search">
         <details>
           <summary class="header__icon header__icon--search header__icon--summary link focus-inset modal__toggle" aria-haspopup="dialog" aria-label="{{ 'general.search.search' | t }}">
             <span>
@@ -523,15 +512,12 @@
               {%- endif -%}
                 <form action="{{ routes.search_url }}" method="get" role="search" class="search search-modal__form">
                   <div class="field">
-                     
-                
                     <input class="search__input field__input"
                       id="Search-In-Modal"
                       type="search"
                       name="q"
                       value=""
                       placeholder="{{ 'general.search.search' | t }}"
-                 
                       {%- if settings.predictive_search_enabled -%}
                         role="combobox"
                         aria-expanded="false"
@@ -552,9 +538,8 @@
                         <use href="#icon-search">
                       </svg>
                     </button>
-                    
                   </div>
- 
+
                   {%- if settings.predictive_search_enabled -%}
                     <div class="predictive-search predictive-search--header" tabindex="-1" data-predictive-search>
                       <div class="predictive-search__loading-state">
@@ -567,7 +552,6 @@
                     <span class="predictive-search-status visually-hidden" role="status" aria-hidden="true"></span>
                   {%- endif -%}
                 </form>
-               
               {%- if settings.predictive_search_enabled -%}
                 </predictive-search>
               {%- endif -%}
@@ -576,13 +560,11 @@
                   <use href="#icon-close">
                 </svg>
               </button>
-              
             </div>
           </div>
-          {% endif %}
         </details>
       </details-modal>
-    </div>
+      {% endcomment %}
 
       {%- if shop.customer_accounts_enabled -%}
         <a href="{%- if customer -%}{{ routes.account_url }}{%- else -%}{{ routes.account_login_url }}{%- endif -%}" class="header__icon header__icon--account link focus-inset{% if section.settings.menu != blank %} small-hide{% endif %}">
@@ -598,54 +580,37 @@
           </span>
         </a>
       {%- endif -%}
-      
-      
 
-     <div class= "{%-  if section.settings.hide_cart == false -%} hidden{%- endif -%} ">           
-        <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
-          {%- liquid
-            if cart == empty
-              render 'icon-cart-empty'
-           else
-             render 'icon-cart'
-           endif
-         -%}
-         <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
-          {%- if cart != empty -%}
-           <div class="cart-count-bubble">
-             {%- if cart.item_count < 100 -%}
-               <span aria-hidden="true">{{ cart.item_count }}</span>
-             {%- endif -%}
-             <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
-           </div>
-         {%- endif -%}
-       </a>
-     </div>  
-    
-       
-           {%- for block in section.blocks -%}
-             <div  class="button_link" >
-               {%- if block.settings.button_label != blank -%}
-                 <a id="button_call_to_action" {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
-                 <a class="header__icon call_to_action_icon " id="call_to_action" {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}"> 
-                    {%-if  block.settings.icontel_type == "options_1" -%} 
-                       {%- liquid render 'logo-1-tel'-%}
-                    {%-elsif block.settings.icontel_type == "options_2" -%}
-                       {%- liquid render 'icon-2-tel'-%}
-                    {%-elsif block.settings.icontel_type == "options_3" -%}
-                      {%- liquid render 'icon-3-tel'-%}
-                    {%- endif -%} 
-                  </a>
-               {%- endif -%}
-             </div>
-           {%- endfor -%}
-       
+      {% comment %}
+      <a href="{{ routes.cart_url }}" class="header__icon header__icon--cart link focus-inset" id="cart-icon-bubble">
+        {%- liquid
+          if cart == empty
+            render 'icon-cart-empty'
+          else
+            render 'icon-cart'
+          endif
+        -%}
+        <span class="visually-hidden">{{ 'templates.cart.cart' | t }}</span>
+        {%- if cart != empty -%}
+          <div class="cart-count-bubble">
+            {%- if cart.item_count < 100 -%}
+              <span aria-hidden="true">{{ cart.item_count }}</span>
+            {%- endif -%}
+            <span class="visually-hidden">{{ 'sections.header.cart_count' | t: count: cart.item_count }}</span>
+          </div>
+        {%- endif -%}
+      </a>
+      {% endcomment %}
+
+        {%- for block in section.blocks -%}
+          {%- if block.settings.button_label != blank -%}
+            <a id="button_call_to_action" class="button_link" {% if block.settings.button_link == blank %} role="link" aria-disabled="true"{% else %} href="{{ block.settings.button_link }}"{% endif %} class="button{% if block.settings.button_style_secondary %} button--secondary{% else %} button--primary{% endif %}">{{ block.settings.button_label | escape }}</a>
+          {%- endif -%}
+        {%- endfor -%}
 
 
-    
-
-  </div>
-</header>
+    </div>
+  </header>
 </{% if section.settings.enable_sticky_header %}sticky-header{% else %}div{% endif %}>
 
 {%- if settings.cart_type == "notification" -%}
@@ -784,46 +749,7 @@
   </script>
 {%- endif -%}
 
-     
-{%- if section.settings.adapt_height_first_image and section.settings.image != blank -%}
-{%- style -%}
-@media screen and (max-width: 749px) {
-  #Banner-{{ section.id }}::before,
-  #Banner-{{ section.id }} .banner__media::before,
-  #Banner-{{ section.id }}:not(.banner--mobile-bottom) .banner__content::before {
-    padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
-    content: '';
-    display: block;
-  }
-}
-
-@media screen and (min-width: 750px) {
-  #Banner-{{ section.id }}::before,
-  #Banner-{{ section.id }} .banner__media::before {
-    padding-bottom: {{ 1 | divided_by: section.settings.image.aspect_ratio | times: 100 }}%;
-    content: '';
-    display: block;
-  }
-}
-{%- endstyle -%}
-{%- endif -%}
-
-{%- style -%}
-#Banner-{{ section.id }}::after {
-  opacity: {{ section.settings.image_overlay_opacity | divided_by: 100.0 }};
-}
-{%- endstyle -%}
-
-
-   
-
-
-
-
-
 {% schema %}
-
-
 {
   "name": "t:sections.header.name",
   "class": "section-header",
@@ -871,7 +797,6 @@
       "unit": "t:sections.header.settings.logo_width.unit",
       "label": "t:sections.header.settings.logo_width.label"
     },
-   
     {
       "type": "select",
       "id": "logo_position",
@@ -893,17 +818,6 @@
       "label": "t:sections.header.settings.logo_position.label",
       "info": "t:sections.header.settings.logo_position.info"
     },
-    
-
-   
-
-
-
-
-
-
-
-
     {
       "type": "link_list",
       "id": "menu",
@@ -932,22 +846,6 @@
       "id": "show_line_separator",
       "default": true,
       "label": "t:sections.header.settings.show_line_separator.label"
-    },
-   
-    {
-      "type": "checkbox",
-      "id": "hide_cart",
-      "default": true,
-      "label": "t:sections.header.settings.hide_cart.label"
-      
-    },
-        
-    {
-      "type": "checkbox",
-      "id": "hide_search",
-      "default": true,
-      "label": "t:sections.header.settings.hide_search.label"
-    
     },
     {
       "type": "checkbox",
@@ -994,10 +892,9 @@
       "label": "t:sections.all.padding.padding_bottom",
       "default": 20
     }
-      
   ],
-  
-     "blocks": [
+
+  "blocks": [
       {
 
          "type": "buttons",
@@ -1022,30 +919,9 @@
             "id": "button_style_secondary",
             "default": false,
            "label": "t:sections.header.blocks.buttons.settings.button_style_secondary.label"
-          },
-          {
-            "type": "select",
-            "id": "icontel_type",
-            "options": [
-              {
-                "value": "options_1",
-                "label": "t:sections.header.blocks.buttons.settings.icontel_type.options_1.label"
-              },
-              {
-                "value": "options_2",
-                "label": "t:sections.header.blocks.buttons.settings.icontel_type.options_2.label"
-              },
-              {
-                "value": "options_3",
-                "label": "t:sections.header.blocks.buttons.settings.icontel_type.options_3.label"
-              }
-            ],
-            "default": "options_1",
-            "label": "t:sections.header.blocks.buttons.settings.icontel_type.label",
-            "info": "t:sections.header.blocks.buttons.settings.icontel_type.info"
           }
-        ]        
-     }
+        ]
+      }
    ]
 }
 {% endschema %}
